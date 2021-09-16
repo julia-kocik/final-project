@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TopBar} from '../TopBar/TopBar';
 
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './MainLayout.module.scss';
+import styles from './TopBar.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <TopBar />
-    <h2>MainLayout</h2>
-    {children}
+    <div>
+      <h2>DOŁĄCZ DO NAS</h2>
+      <FontAwesomeIcon icon={faFacebook} />
+      <FontAwesomeIcon icon={faInstagram} />
+      <FontAwesomeIcon icon={faTwitter} />
+    </div>
   </div>
 );
 
@@ -33,7 +37,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as MainLayout,
-  // Container as MainLayout,
-  Component as MainLayoutComponent,
+  Component as TopBar,
+  // Container as TopBar,
+  Component as TopBarComponent,
 };
