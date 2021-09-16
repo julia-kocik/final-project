@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-blue;
+    .logo {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .title {
+        color: $color-white;
+        padding: 0 10px;
+        font-family: $font-logo;
+        font-size: 28px;
+    }
+}
