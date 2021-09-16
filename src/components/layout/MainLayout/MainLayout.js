@@ -15,7 +15,6 @@ const Component = ({className, children}) => (
     <TopBar />
     <Logo logo="https://cdn.pixabay.com/photo/2015/05/30/14/27/yorkshire-terrier-790361_1280.jpg"/>
     <NavBar/>
-    <h2>MainLayout</h2>
     {children}
   </div>
 );
