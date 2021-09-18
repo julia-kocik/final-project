@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 import clsx from 'clsx';
 
@@ -11,11 +12,11 @@ import styles from './Products.module.scss';
 const Component = ({className, products}) => (
   <div className={clsx(className, styles.root)}>
     {products.map(one => (
-      <div className={styles.postBox} key={one._id}>
+      <Link className={styles.postBox} to={`/products/${one.id}`} key={one.id}>
         <h2 className={styles.title}>{one.title.toUpperCase()}</h2>
         <img className={styles.image} src={one.photo} alt="ProductPhoto"></img>
         <p className={styles.price}>$ {one.price}</p>
-      </div>
+      </Link>
     ))}
   </div>
 );
