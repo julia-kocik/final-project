@@ -5,6 +5,7 @@ import clsx from 'clsx';
 
 import { connect } from 'react-redux';
 import { getAll } from '../../../redux/productsRedux.js';
+import {Button} from '../../common/Button/Button';
 
 import styles from './Product.module.scss';
 
@@ -28,6 +29,7 @@ const Component = ({className, products, linkId}) => {
           <div className={styles.rightContainer}>
             <h2>PRODUCT DESCRIPTION</h2>
             <p>{one.description}</p>
+            <Button name="ADD TO CART"/>
           </div>
         </div>
       ))}
