@@ -12,10 +12,23 @@ const Component = ({className, products, linkId}) => {
   return (
     <div className={clsx(className, styles.root)}>
       {products.filter(element => element.id == linkId).map(one => (
-        <div className={styles.postBox} key={one.id}>
-          <p className={styles.title}>{one.title.toUpperCase()}</p>
-          <img className={styles.image} src={one.photo} alt="Product one"></img>
-          <p className={styles.price}>${one.price}</p>
+        <div key={one.id} className={styles.container}>
+          <div className={styles.leftContainer}>
+            <div className={styles.postBox}>
+              <p className={styles.title}>{one.title.toUpperCase()}</p>
+              <img className={styles.image} src={one.photo} alt="Product one"></img>
+              <p className={styles.price}>${one.price}</p>
+            </div>
+            <div className={styles.imagesBox}>
+              <img className={styles.addPhoto} src={one.addPhoto1} alt="Product"></img>
+              <img className={styles.addPhoto} src={one.addPhoto2} alt="Product"></img>
+              <img className={styles.addPhoto} src={one.addPhoto3} alt="Product"></img>
+            </div>
+          </div>
+          <div className={styles.rightContainer}>
+            <h2>PRODUCT DESCRIPTION</h2>
+            <p>{one.description}</p>
+          </div>
         </div>
       ))}
     </div>
