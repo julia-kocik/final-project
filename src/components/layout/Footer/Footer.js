@@ -7,18 +7,22 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './NavBar.module.scss';
+import styles from './Footer.module.scss';
 
-const Component = ({className, children}) => (
+const Component = ({className}) => (
   <div className={clsx(className, styles.root)}>
-    <NavLink to='/home'className={styles.navLink}>Home</NavLink>
-    <NavLink to='/shop' className={styles.navLink}>Shop</NavLink>
-    <NavLink to='/contact' className={styles.navLink}>Contact</NavLink>
+    <div className={styles.footerLink}>
+      <NavLink to='/home'className={styles.navLink}>Home</NavLink>
+      <NavLink to='/shop' className={styles.navLink}>Shop</NavLink>
+      <NavLink to='/contact' className={styles.navLink}>Contact</NavLink>
+    </div>
+    <div className={styles.copyright}>
+      <span>copyright © 2021 - PET STORE</span>
+    </div>
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 
@@ -33,7 +37,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as NavBar,
-  // Container as NavBar,
-  Component as NavBarComponent,
+  Component as Footer,
+  // Container as Footer,
+  Component as FooterComponent,
 };

@@ -14,7 +14,7 @@ const Component = ({className, products}) => (
       <div className={styles.postBox} key={one._id}>
         <h2 className={styles.title}>{one.title.toUpperCase()}</h2>
         <img className={styles.image} src={one.photo} alt="ProductPhoto"></img>
-        <p className={styles.price}>${one.price}</p>
+        <p className={styles.price}>$ {one.price}</p>
       </div>
     ))}
   </div>

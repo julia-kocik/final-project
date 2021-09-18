@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {TopBar} from '../TopBar/TopBar';
 import {Logo} from '../../features/Logo/Logo';
 import {NavBar} from '../NavBar/NavBar';
+import {Footer} from '../Footer/Footer';
 import clsx from 'clsx';
 
 // import { connect } from 'react-redux';
@@ -16,6 +17,7 @@ const Component = ({className, children}) => (
     <Logo logo="https://cdn.pixabay.com/photo/2015/05/30/14/27/yorkshire-terrier-790361_1280.jpg"/>
     <NavBar/>
     {children}
+    <Footer/>
   </div>
 );
 

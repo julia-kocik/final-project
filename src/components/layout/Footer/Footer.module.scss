@@ -1,0 +1,26 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    background-color: $color-blue;
+    .footerLink {
+        display: flex;
+        justify-content: center;
+        .navLink {
+            font-family: $font-main;
+            font-size: 24px;
+            text-decoration: none;
+            color: $color-white;
+            margin: 20px 30px;
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+        
+        span {
+            color: $color-white;
+            padding-bottom: 20px;
+            font-family: $font-main;
+        }
+    }
+}
