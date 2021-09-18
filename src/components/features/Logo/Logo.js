@@ -8,17 +8,17 @@ import clsx from 'clsx';
 
 import styles from './Logo.module.scss';
 
-const Component = ({className, logo}) => {
+const Component = ({className}) => {
   return (
     <div className={clsx(className, styles.root)}>
-      <img className={styles.logo} src={logo} alt="Shop logo"/>
-      <h2 className={styles.title}>PET STORE</h2>
+      <div className={styles.container}>
+        <h2 className={styles.title}>PET STORE</h2>
+      </div>
     </div>
   );
 };
 
 Component.propTypes = {
-  logo: PropTypes.string,
   className: PropTypes.string,
 };
 

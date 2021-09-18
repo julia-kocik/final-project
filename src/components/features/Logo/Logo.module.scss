@@ -1,22 +1,24 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    height: 250px;
+    height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     background-color: $color-blue;
-    .logo {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    .title {
-        color: $color-white;
-        padding: 0 10px;
-        font-family: $font-logo;
-        font-size: 28px;
+    background: url('https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background:rgba(156, 104, 104, 0.3);
+        .title {
+            color: $color-white;
+            padding: 20px 40px;
+            font-family: $font-logo;
+            font-size: 100px;
+            border: 5px solid $color-white;
+            border-radius: 10px;
+        }
     }
 }

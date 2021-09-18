@@ -277,4 +277,5 @@ export const initialState = {
       addPhoto3: 'https://cdn.pixabay.com/photo/2018/03/11/20/55/woman-3218052_1280.jpg',
     },
   ],
+  cartItems: [],
 };
