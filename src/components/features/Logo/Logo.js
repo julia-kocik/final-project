@@ -11,7 +11,7 @@ import styles from './Logo.module.scss';
 const Component = ({className}) => {
   return (
     <div className={clsx(className, styles.root)}>
-      <div className={styles.container}>
+      <div className={styles.overlay}>
         <h2 className={styles.title}>PET STORE</h2>
       </div>
     </div>

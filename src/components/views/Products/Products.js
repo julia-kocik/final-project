@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getAll } from '../../../redux/productsRedux.js';
 
 import styles from './Products.module.scss';
 
@@ -27,7 +26,7 @@ Component.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  products: getAll(state),
+  products: state.initialState.products,
 });
 
 // const mapDispatchToProps = dispatch => ({

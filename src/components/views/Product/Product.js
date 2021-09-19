@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getAll } from '../../../redux/productsRedux.js';
-import {Button} from '../../common/Button/Button';
+import { addToCart } from '../../../redux/productsRedux.js';
 
 import styles from './Product.module.scss';
 
-const Component = ({className, products, linkId}) => {
+const Component = ({className, products, linkId, addToCart}) => {
   return (
     <div className={clsx(className, styles.root)}>
       {products.filter(element => element.id == linkId).map(one => (
@@ -29,7 +28,7 @@ const Component = ({className, products, linkId}) => {
           <div className={styles.rightContainer}>
             <h2>PRODUCT DESCRIPTION</h2>
             <p>{one.description}</p>
-            <Button name="ADD TO CART"/>
+            <button className={styles.button} onClick={() => addToCart(one.id)}>ADD TO CART</button>
           </div>
         </div>
       ))}
@@ -41,18 +40,19 @@ Component.propTypes = {
   products: PropTypes.array,
   className: PropTypes.string,
   linkId: PropTypes.string,
+  addToCart: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => ({
-  products: getAll(state),
+  products: state.initialState.products,
   linkId: props.match.params.id,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
+const mapDispatchToProps = dispatch => ({
+  addToCart: (id) => dispatch(addToCart(id)), 
+});
 
-const Container = connect(mapStateToProps)(Component);
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   //Component as Product,

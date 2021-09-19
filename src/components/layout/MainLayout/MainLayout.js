@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {TopBar} from '../TopBar/TopBar';
-import {Logo} from '../../features/Logo/Logo';
-import {NavBar} from '../NavBar/NavBar';
 import {Footer} from '../Footer/Footer';
 import clsx from 'clsx';
 
@@ -14,8 +12,6 @@ import styles from './MainLayout.module.scss';
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <TopBar />
-    <Logo/>
-    <NavBar/>
     {children}
     <Footer/>
   </div>

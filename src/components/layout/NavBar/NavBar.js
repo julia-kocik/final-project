@@ -12,7 +12,6 @@ import styles from './NavBar.module.scss';
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <NavLink to='/home'className={styles.navLink}>Home</NavLink>
-    <NavLink to='/shop' className={styles.navLink}>Shop</NavLink>
     <NavLink to='/contact' className={styles.navLink}>Contact</NavLink>
   </div>
 );
