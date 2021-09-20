@@ -5,6 +5,7 @@ import {CartItem} from '../CartItem/CartItem';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Cart.module.scss';
@@ -14,7 +15,6 @@ const Component = ({className, cart}) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    console.log(cart);
     let items = 0;
     let price = 0;
 
@@ -41,9 +41,11 @@ const Component = ({className, cart}) => {
             <span>TOTAL: ({totalItems} items)</span>
             <span>$ {totalPrice}</span>
           </div>
-          <button className={styles.summary__checkoutBtn}>
+          <Link to='/order'>
+            <button className={styles.summary__checkoutBtn}>
           Proceed To Checkout
-          </button>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
