@@ -48,9 +48,9 @@
   
   .summary__checkoutBtn {
     padding: 10px 17px;
-    border: 1px solid $color-violet;
+    border: 1px solid $color-blue;
     border-radius: 10px;
-    background: $color-violet;
+    background: $color-blue;
     color: $color-white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -59,7 +59,7 @@
   
   .summary__checkoutBtn:focus {
     outline: none;
-    border: 1px solid $color-violet;
+    border: 1px solid $color-blue;
   }
   
   .summary__checkoutBtn:hover {

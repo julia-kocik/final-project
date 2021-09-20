@@ -20,10 +20,10 @@ const LOAD_CURRENT_ITEM = createActionName('LOAD_CURRENT_ITEM');
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
-export const addToCart = (itemID) => ({ payload: {id: itemID}, type: ADD_TO_CART});
-export const removeFromCart = payload => ({ payload, type: REMOVE_FROM_CART });
-export const adjustItemQty = payload => ({ payload, type: ADJUST_ITEM_QTY });
-export const loadCurrentItem = payload => ({ payload, type: LOAD_CURRENT_ITEM });
+export const addToCart = itemID => ({ payload: {id: itemID}, type: ADD_TO_CART});
+export const removeFromCart = itemID => ({ payload: {id: itemID}, type: REMOVE_FROM_CART});
+export const adjustItemQty = (itemID, qty)=> ({ payload: {id: itemID, qty}, type: ADJUST_ITEM_QTY });
+export const loadCurrentItem = item => ({ payload: item, type: LOAD_CURRENT_ITEM });
 
 
 /* thunk creators */

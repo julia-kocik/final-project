@@ -19,6 +19,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://cdn.pixabay.com/photo/2015/09/06/00/55/dog-926785_1280.jpg',
       addPhoto2: 'https://cdn.pixabay.com/photo/2016/12/17/01/31/dog-1912727_1280.jpg',
       addPhoto3: 'https://cdn.pixabay.com/photo/2018/03/11/20/55/woman-3218052_1280.jpg',
@@ -42,6 +45,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3198050/pexels-photo-3198050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/8434670/pexels-photo-8434670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -65,6 +71,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/5732460/pexels-photo-5732460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/5731804/pexels-photo-5731804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/5732451/pexels-photo-5732451.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
@@ -88,6 +97,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3198050/pexels-photo-3198050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/8434670/pexels-photo-8434670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -111,6 +123,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3155894/pexels-photo-3155894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/3013467/pexels-photo-3013467.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
       addPhoto3: 'https://images.pexels.com/photos/6864673/pexels-photo-6864673.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
@@ -134,6 +149,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://cdn.pixabay.com/photo/2015/09/06/00/55/dog-926785_1280.jpg',
       addPhoto2: 'https://cdn.pixabay.com/photo/2016/12/17/01/31/dog-1912727_1280.jpg',
       addPhoto3: 'https://cdn.pixabay.com/photo/2018/03/11/20/55/woman-3218052_1280.jpg',
@@ -156,7 +174,10 @@ export const initialState = {
       Turpis massa tincidunt dui ut. Tristique senectus et netus et malesuada fames. Semper risus in hendrerit gravida rutrum. 
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
-      Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`,
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`, 
       addPhoto1: 'https://cdn.pixabay.com/photo/2015/09/06/00/55/dog-926785_1280.jpg',
       addPhoto2: 'https://cdn.pixabay.com/photo/2016/12/17/01/31/dog-1912727_1280.jpg',
       addPhoto3: 'https://cdn.pixabay.com/photo/2018/03/11/20/55/woman-3218052_1280.jpg',
@@ -180,6 +201,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3198050/pexels-photo-3198050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/8434670/pexels-photo-8434670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -203,6 +227,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/5732460/pexels-photo-5732460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/5731804/pexels-photo-5731804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/5732451/pexels-photo-5732451.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
@@ -226,6 +253,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3198050/pexels-photo-3198050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/8434670/pexels-photo-8434670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto3: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -249,6 +279,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://images.pexels.com/photos/3155894/pexels-photo-3155894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       addPhoto2: 'https://images.pexels.com/photos/3013467/pexels-photo-3013467.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
       addPhoto3: 'https://images.pexels.com/photos/6864673/pexels-photo-6864673.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
@@ -272,6 +305,9 @@ export const initialState = {
       Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui 
       id ornare arcu odio ut sem. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. 
       Vivamus arcu felis bibendum ut tristique. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh.`, 
+      shortDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
+      Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra.`,
       addPhoto1: 'https://cdn.pixabay.com/photo/2015/09/06/00/55/dog-926785_1280.jpg',
       addPhoto2: 'https://cdn.pixabay.com/photo/2016/12/17/01/31/dog-1912727_1280.jpg',
       addPhoto3: 'https://cdn.pixabay.com/photo/2018/03/11/20/55/woman-3218052_1280.jpg',
