@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const productsRoutes = require('./routes/products.routes');
+const cartsRoutes = require('./routes/carts.routes');
 
 const app = express();
 
@@ -14,10 +15,11 @@ app.use(express.urlencoded({ extended: false }));
 
 /* API ENDPOINTS */
 app.use('/api', productsRoutes);
+app.use('/api', cartsRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
-  res.status(404).send({ post: 'Not found...' });
+  res.status(404).send({ product: 'Not found...' });
 });
 
 /* REACT WEBSITE */
