@@ -41,6 +41,17 @@ const Component = ({className, cart}) => {
           </div>
         </div>
       </div>
+      <div className={styles.formBox}>
+        <form className={styles.addForm}>
+          <label>Name</label>
+          <input className={styles.formInput} type="text" name="name"></input>
+          <label>Surname</label>
+          <input className={styles.formInput} type="text" name="name"></input>
+          <label>Address</label>
+          <input className={styles.formInput} type="text" name="name"></input>
+          <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
+        </form>
+      </div>
     </div>
   );
 };

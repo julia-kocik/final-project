@@ -48,5 +48,53 @@
     font-weight: bold;
   }
   
+  .formBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+  }
  
+  .addForm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
   
+  .formInput {
+    margin: 10px 20px;
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+}
+
+  .imageInput {
+      margin: 10px 20px;
+      border-radius: 5px;
+  }
+
+  label {
+      font-size: 16px;
+      margin: 10px 20px;
+  }
+
+  .summary__checkoutBtn {
+    padding: 10px 17px;
+    margin: 20px 10px;
+    border: 1px solid $color-blue;
+    border-radius: 10px;
+    background: $color-blue;
+    color: $color-white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .summary__checkoutBtn:focus {
+    outline: none;
+    border: 1px solid $color-blue;
+  }
+  
+  .summary__checkoutBtn:hover {
+    opacity: 0.75;
+  }
