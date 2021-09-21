@@ -6,12 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { connect } from 'react-redux';
-import { adjustItemQty, removeFromCart } from '../../../redux/productsRedux.js';
+import { adjustItemQty, removeFromCart, adjustItemReq } from '../../../redux/productsRedux.js';
 
 import styles from './CartItem.module.scss';
 
-const Component = ({className, item, removeFromCart, adjustItemQty}) => {
+const Component = ({className, item, removeFromCart, adjustItemQty, adjustItemReq}) => {
   const [input, setInput] = useState(item.qty);
+  const [area, setArea] = useState(item.request);
+  const onChangeRequestHandler = (e) => {
+    setArea(e.target.value);
+    adjustItemReq(item.id, e.target.value);
+  };
   const onChangeHandler = (e) => {
     setInput(e.target.value);
     adjustItemQty(item.id, e.target.value);
@@ -27,6 +32,9 @@ const Component = ({className, item, removeFromCart, adjustItemQty}) => {
         <div className={styles.cartItem__details}>
           <p className={styles.details__title}>{item.title}</p>
           <p className={styles.details__desc}>{item.shortDesc}</p>
+          
+          <textarea name="requests" value={area} onChange={onChangeRequestHandler}></textarea>
+            
           <p className={styles.details__price}>$ {item.price}</p>
         </div>
         <div className={styles.cartItem__actions}>
@@ -57,6 +65,7 @@ Component.propTypes = {
   item: PropTypes.object,
   removeFromCart: PropTypes.func,
   adjustItemQty: PropTypes.func,
+  adjustItemReq: PropTypes.func,
 };
 
 // const mapStateToProps = state => ({
@@ -66,6 +75,7 @@ Component.propTypes = {
 const mapDispatchToProps = dispatch => ({
   removeFromCart: (id) => dispatch(removeFromCart(id)), 
   adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
+  adjustItemReq: (id, request) => dispatch(adjustItemReq(id, request)),
 });
 
 const Container = connect(null, mapDispatchToProps)(Component);
