@@ -314,5 +314,4 @@ export const initialState = {
     },
   ],
   cart: [],
-  currentItem: null,
 };
