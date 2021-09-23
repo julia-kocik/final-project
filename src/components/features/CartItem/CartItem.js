@@ -6,20 +6,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { connect } from 'react-redux';
-import { adjustItemQty, removeFromCart, adjustItemReq } from '../../../redux/productsRedux.js';
+//import { adjustItemQty, removeFromCart, adjustItemReq } from '../../../redux/productsRedux.js';
 
 import styles from './CartItem.module.scss';
 
-const Component = ({className, item, removeFromCart, adjustItemQty, adjustItemReq}) => {
+const Component = ({className, item}) => {
   const [input, setInput] = useState(item.qty);
   const [area, setArea] = useState(item.request);
   const onChangeRequestHandler = (e) => {
     setArea(e.target.value);
-    adjustItemReq(item.id, e.target.value);
+    //adjustItemReq(item.id, e.target.value);
   };
   const onChangeHandler = (e) => {
     setInput(e.target.value);
-    adjustItemQty(item.id, e.target.value);
+    //adjustItemQty(item.id, e.target.value);
   };
   return (
     <div className={clsx(className, styles.root)}>
@@ -52,7 +52,7 @@ const Component = ({className, item, removeFromCart, adjustItemQty, adjustItemRe
           <button
             className={styles.actions__deleteItemBtn}
           >
-            <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} onClick={() => removeFromCart(item.id)}></FontAwesomeIcon>
+            <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} /*onClick={() => removeFromCart(item.id)}*/></FontAwesomeIcon>
           </button>
         </div>
       </div>
@@ -63,9 +63,9 @@ const Component = ({className, item, removeFromCart, adjustItemQty, adjustItemRe
 Component.propTypes = {
   className: PropTypes.string,
   item: PropTypes.object,
-  removeFromCart: PropTypes.func,
+  /*removeFromCart: PropTypes.func,
   adjustItemQty: PropTypes.func,
-  adjustItemReq: PropTypes.func,
+  adjustItemReq: PropTypes.func,*/
 };
 
 // const mapStateToProps = state => ({
@@ -73,9 +73,9 @@ Component.propTypes = {
 // });
 
 const mapDispatchToProps = dispatch => ({
-  removeFromCart: (id) => dispatch(removeFromCart(id)), 
+  /*removeFromCart: (id) => dispatch(removeFromCart(id)), 
   adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
-  adjustItemReq: (id, request) => dispatch(adjustItemReq(id, request)),
+  adjustItemReq: (id, request) => dispatch(adjustItemReq(id, request)),*/
 });
 
 const Container = connect(null, mapDispatchToProps)(Component);

@@ -1,10 +1,10 @@
-require("dotenv").config();
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
 const productsRoutes = require('./routes/productRoutes');
-const connectDB = require("./config/db");
+const connectDB = require('./config/db');
 const app = express();
 
 /* MIDDLEWARE */

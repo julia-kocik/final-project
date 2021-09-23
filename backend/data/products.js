@@ -1,6 +1,5 @@
 const products = [
   {
-    id: 1,
     title: 'Dog-lead',
     photo: 'https://images.pexels.com/photos/7210704/pexels-photo-7210704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     price: 5,
@@ -27,10 +26,9 @@ const products = [
     countInStock: 15,
   },
   {
-    id: 2,
     title: 'Bowl',
     photo: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '35',
+    price: 35,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -54,10 +52,9 @@ const products = [
     countInStock: 25,
   },
   {
-    id: 3,
     title: 'Outfit',
     photo: 'https://images.pexels.com/photos/5732465/pexels-photo-5732465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '25',
+    price: 25,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -81,10 +78,9 @@ const products = [
     countInStock: 16,
   },
   {
-    id: 4,
     title: 'Food',
     photo: 'https://images.pexels.com/photos/7310128/pexels-photo-7310128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '10',
+    price: 10,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -108,10 +104,9 @@ const products = [
     countInStock: 22,
   },
   {
-    id: 5,
     title: 'Toy',
     photo: 'https://images.pexels.com/photos/5732454/pexels-photo-5732454.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '50',
+    price: 50,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -135,10 +130,9 @@ const products = [
     countInStock: 13,
   },
   {
-    id: 6,
     title: 'Dog-lead',
     photo: 'https://images.pexels.com/photos/7210704/pexels-photo-7210704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '5',
+    price: 5,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -162,10 +156,9 @@ const products = [
     countInStock: 19,
   },
   {
-    id: 7,
     title: 'Dog-lead',
     photo: 'https://images.pexels.com/photos/7210704/pexels-photo-7210704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '5',
+    price: 5,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -189,10 +182,9 @@ const products = [
     countInStock: 23,
   },
   {
-    id: 8,
     title: 'Bowl',
     photo: 'https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '35',
+    price: 35,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -216,10 +208,9 @@ const products = [
     countInStock: 24,
   },
   {
-    id: 9,
     title: 'Outfit',
     photo: 'https://images.pexels.com/photos/5732465/pexels-photo-5732465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '25',
+    price: 25,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -243,10 +234,9 @@ const products = [
     countInStock: 23,
   },
   {
-    id: 10,
     title: 'Food',
     photo: 'https://images.pexels.com/photos/7310128/pexels-photo-7310128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '10',
+    price: 10,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -270,10 +260,9 @@ const products = [
     countInStock: 8,
   },
   {
-    id: 11,
     title: 'Toy',
     photo: 'https://images.pexels.com/photos/5732454/pexels-photo-5732454.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '50',
+    price: 50,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 
@@ -297,10 +286,9 @@ const products = [
     countInStock: 19,
   },
   {
-    id: 12,
     title: 'Dog-lead',
     photo: 'https://images.pexels.com/photos/7210704/pexels-photo-7210704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    price: '5',
+    price: 5,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Vivamus arcu felis bibendum ut tristique et egestas. Morbi tincidunt ornare massa eget egestas purus. 
         Neque volutpat ac tincidunt vitae semper. Dictum sit amet justo donec enim diam vulputate ut pharetra. 

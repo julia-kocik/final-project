@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
@@ -12,9 +12,9 @@ import { connect } from 'react-redux';
 import styles from './TopBar.module.scss';
 //import { Link } from 'react-router-dom';
 
-const Component = ({className, cart}) => {
+const Component = ({className}) => {
   const [cartCount, setCartCount] = useState(0);
-
+  /*
   useEffect(() => {
     console.log(cart);
     let count = 0;
@@ -25,7 +25,7 @@ const Component = ({className, cart}) => {
 
     setCartCount(count);
   }, [cart, cartCount]);
-
+*/
   return (
     <div className={clsx(className, styles.root)}>
       <div className={styles.leftBar}>
@@ -53,12 +53,12 @@ const Component = ({className, cart}) => {
 };
 
 Component.propTypes = {
-  cart: PropTypes.array,
+  //cart: PropTypes.array,
   className: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
-  cart: state.initialState.cart,
+  //cart: state.initialState.cart,
 });
 
 // const mapDispatchToProps = dispatch => ({
