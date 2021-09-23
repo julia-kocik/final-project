@@ -1,22 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
+import {getProductDetails} from '../../../redux/actions/productActions';
+
 //import { addToCart } from '../../../redux/productsRedux.js';
 
 import styles from './Product.module.scss';
 
-const Component = ({className, products, linkId}) => {
-  
+const Component = ({className, one, getProductDetails, error, loading}) => {
+  useEffect(() => {
+    getProductDetails();
+  }, [getProductDetails]);
   return (
     <div className={clsx(className, styles.root)}>
-      {products.filter(element => element.id == linkId).map(one => (
-        <div key={one.id} className={styles.container}>
+      {loading ? (
+        <h2>Loading...</h2>
+      ) : error ? (
+        <h2>{error}</h2>
+      ) : (
+        <div className={styles.container}>
           <div className={styles.leftContainer}>
             <div className={styles.postBox}>
-              <p className={styles.title}>{one.title.toUpperCase()}</p>
+              <p className={styles.title}>{one.title}</p>
               <img className={styles.image} src={one.photo} alt="Product one"></img>
               <p className={styles.price}>${one.price}</p>
             </div>
@@ -32,24 +40,28 @@ const Component = ({className, products, linkId}) => {
             <button className={styles.button} /*onClick={() => addToCart(one.id)}*/>ADD TO CART</button>
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };
 
 Component.propTypes = {
-  products: PropTypes.array,
+  one: PropTypes.object,
   className: PropTypes.string,
-  linkId: PropTypes.string,
+  getProductDetails: PropTypes.func,
+  loading: PropTypes.bool,
+  error: PropTypes.object,
   //addToCart: PropTypes.func,
 };
 
-const mapStateToProps = (state, props) => ({
-  products: state.initialState.products,
-  linkId: props.match.params.id,
+const mapStateToProps = (state) => ({
+  one: state.getProductDetail.product,
+  loading: state.getProducts.loading,
+  error: state.getProducts.error,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, props) => ({
+  getProductDetails: () => dispatch(getProductDetails(props.match.params.id)),
   //addToCart: (id) => dispatch(addToCart(id)), 
 });
 
@@ -60,3 +72,5 @@ export {
   Container as Product,
   Component as ProductComponent,
 };
+
+ 
