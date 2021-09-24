@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
@@ -12,20 +12,10 @@ import { connect } from 'react-redux';
 import styles from './TopBar.module.scss';
 //import { Link } from 'react-router-dom';
 
-const Component = ({className}) => {
-  const [cartCount, setCartCount] = useState(0);
-  /*
-  useEffect(() => {
-    console.log(cart);
-    let count = 0;
-    cart.forEach((item) => {
-      count += item.qty;
-      console.log('hello!');
-    });
-
-    setCartCount(count);
-  }, [cart, cartCount]);
-*/
+const Component = ({className, cart}) => {
+  const getCartCount = () => {
+    return cart.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
   return (
     <div className={clsx(className, styles.root)}>
       <div className={styles.leftBar}>
@@ -45,7 +35,7 @@ const Component = ({className}) => {
         <h2>LOG IN</h2>
         <FontAwesomeIcon className={styles.icon} icon={faShoppingCart} />
         <Link className={styles.cartLink} to="/cart">
-          <h2>CART ({cartCount})</h2>
+          <h2>CART ({getCartCount()})</h2>
         </Link>
       </div>
     </div>
@@ -53,12 +43,12 @@ const Component = ({className}) => {
 };
 
 Component.propTypes = {
-  //cart: PropTypes.array,
+  cart: PropTypes.array,
   className: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
-  //cart: state.initialState.cart,
+  cart: state.cart.cartItems,
 });
 
 // const mapDispatchToProps = dispatch => ({

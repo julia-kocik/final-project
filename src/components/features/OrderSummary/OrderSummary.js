@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 import { OrderItem } from '../OrderItem/OrderItem';
+import {Link} from 'react-router-dom';
 
 import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
@@ -22,11 +23,17 @@ const Component = ({className, cart}) => {
   return (
     <div className={clsx(className, styles.root)}>
       <div className={styles.cart}>
-        <div className={styles.cart__items}>
-          {cart.map((item) => (
-            <OrderItem key={item.product} item={item} />
-          ))}
-        </div>
+        {cart.length === 0 ? (
+          <div>
+              Your Cart Is Empty <Link to="/">Go Back</Link>
+          </div>
+        ) : (
+          <div className={styles.cart__items}>
+            {cart.map((item) => (
+              <OrderItem key={item.product} item={item} />
+            ))}
+          </div>
+        )}
         <div className={styles.cart__summary}>
           <h4 className={styles.summary__title}>Order Summary</h4>
           <div className={styles.summary__price}>
@@ -36,15 +43,21 @@ const Component = ({className, cart}) => {
         </div>
       </div>
       <div className={styles.formBox}>
-        <form className={styles.addForm}>
-          <label>Name</label>
-          <input className={styles.formInput} type="text" name="name"></input>
-          <label>Surname</label>
-          <input className={styles.formInput} type="text" name="name"></input>
-          <label>Address</label>
-          <input className={styles.formInput} type="text" name="name"></input>
-          <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
-        </form>
+        {cart.length === 0 ? (
+          <div>
+            <></>
+          </div>
+        ) : (
+          <form className={styles.addForm}>
+            <label>Name</label>
+            <input className={styles.formInput} type="text" name="name"></input>
+            <label>Surname</label>
+            <input className={styles.formInput} type="text" name="name"></input>
+            <label>Address</label>
+            <input className={styles.formInput} type="text" name="name"></input>
+            <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
+          </form>
+        )}
       </div>
     </div>
   );

@@ -25,6 +25,15 @@ export const cartReducer = (state = CART_INITIAL_STATE, action) => {
         };
       }
     }
+    case actionTypes.ADJUST_ITEM_REQUEST:
+      return {
+        ...state,
+        cartItems: state.cartItems.map((item) =>
+          item.product === action.payload.product
+            ? { ...item, request: action.payload.request }
+            : item
+        ),
+      };
     case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,

@@ -4,19 +4,18 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { addToCart, removeFromCart } from '../../../redux/actions/cartActions';
+import { addToCart, removeFromCart, adjustItemRequest } from '../../../redux/actions/cartActions';
 
 import { connect } from 'react-redux';
-//import { adjustItemQty, removeFromCart, adjustItemReq } from '../../../redux/productsRedux.js';
 
 import styles from './CartItem.module.scss';
 
-const Component = ({className, item, remove, addToCart}) => {
+const Component = ({className, item, remove, addToCart, adjustItemRequest}) => {
   const [input, setInput] = useState(item.qty);
   const [area, setArea] = useState(item.request);
   const onChangeRequestHandler = (e) => {
     setArea(e.target.value);
-    //adjustItemReq(item.id, e.target.value);
+    adjustItemRequest(item.product, e.target.value);
   };
   const onChangeHandler = (e) => {
     setInput(e.target.value);
@@ -66,6 +65,7 @@ Component.propTypes = {
   item: PropTypes.object,
   remove: PropTypes.func,
   addToCart: PropTypes.func,
+  adjustItemRequest: PropTypes.func,
 };
 
 // const mapStateToProps = state => ({
@@ -75,8 +75,7 @@ Component.propTypes = {
 const mapDispatchToProps = (dispatch, props) => ({
   remove: (id) => dispatch(removeFromCart(id)), 
   addToCart: (id, qty) => dispatch(addToCart(id, qty)), 
-  /*adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
-  adjustItemReq: (id, request) => dispatch(adjustItemReq(id, request)),*/
+  adjustItemRequest: (id, request) => dispatch(adjustItemRequest(id, request)),
 });
 
 const Container = connect(null, mapDispatchToProps)(Component);
