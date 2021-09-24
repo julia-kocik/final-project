@@ -32,7 +32,7 @@ const Component = ({className, cart}) => {
       <div className={styles.cart}>
         <div className={styles.cart__items}>
           {cart.map((item) => (
-            <CartItem key={item.id} item={item} />
+            <CartItem key={item.product} item={item} />
           ))}
         </div>
         <div className={styles.cart__summary}>
@@ -58,7 +58,7 @@ Component.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  cart: state.initialState.cart,
+  cart: state.cart.cartItems,
 });
 
 // const mapDispatchToProps = dispatch => ({

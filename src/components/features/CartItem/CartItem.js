@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { addToCart, removeFromCart } from '../../../redux/actions/cartActions';
 
 import { connect } from 'react-redux';
 //import { adjustItemQty, removeFromCart, adjustItemReq } from '../../../redux/productsRedux.js';
 
 import styles from './CartItem.module.scss';
 
-const Component = ({className, item}) => {
+const Component = ({className, item, remove, addToCart}) => {
   const [input, setInput] = useState(item.qty);
   const [area, setArea] = useState(item.request);
   const onChangeRequestHandler = (e) => {
@@ -19,7 +20,7 @@ const Component = ({className, item}) => {
   };
   const onChangeHandler = (e) => {
     setInput(e.target.value);
-    //adjustItemQty(item.id, e.target.value);
+    addToCart(item.product, e.target.value);
   };
   return (
     <div className={clsx(className, styles.root)}>
@@ -52,7 +53,7 @@ const Component = ({className, item}) => {
           <button
             className={styles.actions__deleteItemBtn}
           >
-            <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} /*onClick={() => removeFromCart(item.id)}*/></FontAwesomeIcon>
+            <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} onClick={() => remove(item.product)}></FontAwesomeIcon>
           </button>
         </div>
       </div>
@@ -63,18 +64,18 @@ const Component = ({className, item}) => {
 Component.propTypes = {
   className: PropTypes.string,
   item: PropTypes.object,
-  /*removeFromCart: PropTypes.func,
-  adjustItemQty: PropTypes.func,
-  adjustItemReq: PropTypes.func,*/
+  remove: PropTypes.func,
+  addToCart: PropTypes.func,
 };
 
 // const mapStateToProps = state => ({
 //   someProp: reduxSelector(state),
 // });
 
-const mapDispatchToProps = dispatch => ({
-  /*removeFromCart: (id) => dispatch(removeFromCart(id)), 
-  adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
+const mapDispatchToProps = (dispatch, props) => ({
+  remove: (id) => dispatch(removeFromCart(id)), 
+  addToCart: (id, qty) => dispatch(addToCart(id, qty)), 
+  /*adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
   adjustItemReq: (id, request) => dispatch(adjustItemReq(id, request)),*/
 });
 

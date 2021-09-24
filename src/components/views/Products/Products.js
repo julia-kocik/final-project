@@ -6,11 +6,11 @@ import {getProducts} from '../../../redux/actions/productActions';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-//import { addToCart } from '../../../redux/productsRedux.js';
+import { addToCart } from '../../../redux/actions/cartActions';
 
 import styles from './Products.module.scss';
 
-const Component = ({className, getProducts, products, error, loading}) => {
+const Component = ({className, getProducts, products, error, loading, addToCart}) => {
   useEffect(() => {
     getProducts();
   }, [getProducts]);
@@ -31,7 +31,7 @@ const Component = ({className, getProducts, products, error, loading}) => {
                 <img className={styles.image} src={one.photo} alt="ProductPhoto"></img>
                 <p className={styles.price}>$ {one.price}</p>
               </Link>
-              <button className={styles.button}>ADD TO CART</button>
+              <button className={styles.button} onClick={() => addToCart(one.id)}>ADD TO CART</button>
             </div>
           ))}
         </div>
@@ -48,7 +48,7 @@ Component.propTypes = {
   products: PropTypes.array,
   loading: PropTypes.bool,
   error: PropTypes.object,
-  //addToCart: PropTypes.func,
+  addToCart: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -59,9 +59,9 @@ const mapStateToProps = state => ({
 
 
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getProducts: () => dispatch(getProducts()),
-  //addToCart: (id) => dispatch(addToCart(id)), 
+  addToCart: (id) => dispatch(addToCart(id)), 
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);

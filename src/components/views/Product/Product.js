@@ -1,19 +1,24 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import {getProductDetails} from '../../../redux/actions/productActions';
+import { getProductDetails } from '../../../redux/actions/productActions';
+import { addToCart } from '../../../redux/actions/cartActions';
 
-//import { addToCart } from '../../../redux/productsRedux.js';
 
 import styles from './Product.module.scss';
 
-const Component = ({className, one, getProductDetails, error, loading}) => {
+const Component = ({className, one, getProductDetails, error, loading, addToCart, history}) => {
+  const [qty, setQty] = useState(1);
   useEffect(() => {
     getProductDetails();
   }, [getProductDetails]);
+  const addToCartHandler = () => {
+    addToCart(one._id, qty);
+    history.push(`/cart`);
+  };
   return (
     <div className={clsx(className, styles.root)}>
       {loading ? (
@@ -37,7 +42,18 @@ const Component = ({className, one, getProductDetails, error, loading}) => {
           <div className={styles.rightContainer}>
             <h2>PRODUCT DESCRIPTION</h2>
             <p>{one.description}</p>
-            <button className={styles.button} /*onClick={() => addToCart(one.id)}*/>ADD TO CART</button>
+            <p>In stock: {one.countInStock}</p>
+            <p>
+                Quantity: 
+              <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                {[...Array(one.countInStock).keys()].map((x) => (
+                  <option key={x + 1} value={x + 1}>
+                    {x + 1}
+                  </option>
+                ))}
+              </select>
+            </p>
+            <button className={styles.button} onClick={addToCartHandler}>ADD TO CART</button>
           </div>
         </div>
       )}
@@ -51,7 +67,8 @@ Component.propTypes = {
   getProductDetails: PropTypes.func,
   loading: PropTypes.bool,
   error: PropTypes.object,
-  //addToCart: PropTypes.func,
+  addToCart: PropTypes.func,
+  history: PropTypes.object,
 };
 
 const mapStateToProps = (state) => ({
@@ -62,7 +79,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
   getProductDetails: () => dispatch(getProductDetails(props.match.params.id)),
-  //addToCart: (id) => dispatch(addToCart(id)), 
+  addToCart: (id, qty) => dispatch(addToCart(props.match.params.id, qty)), 
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
