@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {CartItem} from '../CartItem/CartItem';
 
@@ -11,21 +11,15 @@ import {Link} from 'react-router-dom';
 import styles from './Cart.module.scss';
 
 const Component = ({className, cart}) => {
-  const [totalItems, setTotalItems] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const getCartCount = () => {
+    return cart.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
 
-  useEffect(() => {
-    let items = 0;
-    let price = 0;
-
-    cart.forEach(item => {
-      items += item.qty;
-      price += item.qty * item.price;
-    });
-
-    setTotalItems(items);
-    setTotalPrice(price);
-  },[cart, totalPrice, setTotalPrice, totalItems, setTotalItems]);
+  const getCartSubTotal = () => {
+    return cart
+      .reduce((price, item) => price + item.price * item.qty, 0)
+      .toFixed(2);
+  };
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -38,8 +32,8 @@ const Component = ({className, cart}) => {
         <div className={styles.cart__summary}>
           <h4 className={styles.summary__title}>Cart Summary</h4>
           <div className={styles.summary__price}>
-            <span>TOTAL: ({totalItems} items)</span>
-            <span>$ {totalPrice}</span>
+            <span>TOTAL: ({getCartCount()}) items</span>
+            <span>$ {getCartSubTotal()}</span>
           </div>
           <Link to='/order'>
             <button className={styles.summary__checkoutBtn}>
