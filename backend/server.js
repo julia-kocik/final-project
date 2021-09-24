@@ -4,6 +4,7 @@ const cors = require('cors');
 const path = require('path');
 
 const productsRoutes = require('./routes/productRoutes');
+const ordersRoutes = require('./routes/orderRoutes');
 const connectDB = require('./config/db');
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 /* API ENDPOINTS */
 app.use('/api', productsRoutes);
+app.use('/api', ordersRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
