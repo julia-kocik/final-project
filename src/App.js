@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { createMuiTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
+import {AnimatedSwitch} from 'react-router-transition';
 
 import  store  from './redux/store';
 
@@ -28,7 +29,11 @@ const App = () => (
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <MainLayout>
-            <Switch>
+            <AnimatedSwitch
+              atEnter={{ opacity: 0 }}
+              atLeave={{ opacity: 1 }}
+              atActive={{ opacity: 1 }}
+            >
               <Route exact path='/' component={Homepage} />
               <Route exact path='/home' component={Homepage} />
               <Route exact path='/products' component={Products} />
@@ -36,7 +41,7 @@ const App = () => (
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/order' component={OrderSummary} />
               <Route path='*' component={NotFound} />
-            </Switch>
+            </AnimatedSwitch>
           </MainLayout>
         </ThemeProvider>
       </StylesProvider>

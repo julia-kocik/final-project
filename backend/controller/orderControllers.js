@@ -15,16 +15,20 @@ const addOrders = async (req, res) => {
   try {
     const {
       cart,
+      totalPrice,
       name,
       surname,
       address,
+      email,
     } = req.body;
          
     const newOrder = new Order({
       cart: cart,
+      totalPrice,
       name: name,
       surname: surname,
       address: address,
+      email: email,
     });
     const finalOrder = await newOrder.save();
     res.json(finalOrder);

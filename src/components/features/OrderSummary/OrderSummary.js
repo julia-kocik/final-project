@@ -14,13 +14,28 @@ import { addOneOrder } from '../../../redux/actions/orderActions';
 import styles from './OrderSummary.module.scss';
 
 const Component = ({className, cart, addNewOrder}) => {
+  const elemsForCart = cart.map((item) => {
+    return {
+      name: item.title,
+      price: item.price,
+      qty: item.qty,
+      request: item.request,
+    };
+  });
+  const getCartSubTotal = () => {
+    return cart
+      .reduce((price, item) => price + item.price * item.qty, 0)
+      .toFixed(2);
+  };
   const [order, setOrder] = useState(
     {
       id: '',
-      cart: cart,
+      cart: elemsForCart,
+      totalPrice: getCartSubTotal(),
       name: '',
       surname: '',
       address: '',
+      email: '',
     }
   );
 
@@ -31,15 +46,11 @@ const Component = ({className, cart, addNewOrder}) => {
     return cart.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
 
-  const getCartSubTotal = () => {
-    return cart
-      .reduce((price, item) => price + item.price * item.qty, 0)
-      .toFixed(2);
-  };
+  
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(order.cart, order.name, order.surname, order.address);
-    if(order.cart && order.name && order.surname && order.address){
+    //console.log(order.cart, order.name, order.surname, order.address);
+    if(order.cart && order.name && order.surname && order.address && order.email){
       order.id = uuidv4();
       addNewOrder(order);
       alert('Order has been saved!');
@@ -49,6 +60,7 @@ const Component = ({className, cart, addNewOrder}) => {
         name: '',
         surname: '',
         address: '',
+        email: '',
       });
     } else {
       alert('Please fill required fields');
@@ -89,6 +101,8 @@ const Component = ({className, cart, addNewOrder}) => {
             <input className={styles.formInput} type="text" name="surname" onChange={handleChange}></input>
             <label>Address</label>
             <input className={styles.formInput} type="text" name="address" onChange={handleChange}></input>
+            <label>Email</label>
+            <input className={styles.formInput} type="email" name="email" onChange={handleChange}></input>
             <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
           </form>
         )}

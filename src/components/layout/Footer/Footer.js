@@ -13,7 +13,6 @@ const Component = ({className}) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.footerLink}>
       <NavLink to='/home'className={styles.navLink}>Home</NavLink>
-      <NavLink to='/contact' className={styles.navLink}>Contact</NavLink>
     </div>
     <div className={styles.copyright}>
       <span>copyright © 2021 - PET STORE</span>
