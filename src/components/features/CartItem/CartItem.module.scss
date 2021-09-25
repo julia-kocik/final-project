@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
 .root {
   .cartItem {
@@ -17,15 +18,17 @@
       flex-direction: column;
       justify-content: space-between;
       color: $color-blue;
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
       .details__title {
         font-size: 1rem;
         font-weight: bold;
       }
-      
       .details__desc {
         font-size: 0.8rem;
       }
-      
       .details__price {
         font-size: 1rem;
         font-weight: bold;
@@ -66,7 +69,7 @@
     
     .actions__deleteItemBtn:hover {
       transform: scale(1.2) rotate(360deg);
-      background-color: rgb(209, 15, 15);
+      background-color: $color-blue;
       color: $color-white;
     }
     
@@ -79,7 +82,22 @@
 
 
   
-  
+
+@include mobile {
+  .root {
+    .cartItem {
+      flex-direction: column;
+      .cartItem__image {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .cartItem__actions {
+        flex-direction: row;
+      }
+    }
+  }
+}
   
  
   

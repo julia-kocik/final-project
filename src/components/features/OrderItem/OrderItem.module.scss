@@ -1,6 +1,6 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
-@import '../../../styles/settings.scss';
 
 .root {
   .cartItem {
@@ -36,4 +36,18 @@
         }
       }
     }  
+}
+
+
+@include mobile {
+  .root {
+    .cartItem {
+      flex-direction: column;
+      min-height: 300px;
+      .cartItem__image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }

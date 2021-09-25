@@ -18,7 +18,7 @@ const Component = ({className, item}) => {
           alt={item.title}
         />
         <div className={styles.cartItem__details}>
-          <p className={styles.details__title}>Name:{item.title}</p>
+          <p className={styles.details__title}>Name: {item.title}</p>
           <p className={styles.details__desc}>Quantity: {item.qty}</p>
           <p className={styles.details__price}>Price: $ {item.price}</p>
           <p className={styles.details__price}>Additional request: {item.request}</p>
