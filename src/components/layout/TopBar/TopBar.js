@@ -20,15 +20,17 @@ const Component = ({className, cart}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.leftBar}>
         <h2>JOIN US</h2>
-        <a href="https://facebook.com">
-          <FontAwesomeIcon className={styles.icon} icon={faFacebook}></FontAwesomeIcon>
-        </a>
-        <a href="https://instagram.com">
-          <FontAwesomeIcon className={styles.icon} icon={faInstagram}></FontAwesomeIcon>
-        </a>
-        <a href="https://twitter.com">
-          <FontAwesomeIcon className={styles.icon} icon={faTwitter}></FontAwesomeIcon>
-        </a>
+        <div className={styles.iconBox}>
+          <a href="https://facebook.com">
+            <FontAwesomeIcon className={styles.icon} icon={faFacebook}></FontAwesomeIcon>
+          </a>
+          <a href="https://instagram.com">
+            <FontAwesomeIcon className={styles.icon} icon={faInstagram}></FontAwesomeIcon>
+          </a>
+          <a href="https://twitter.com">
+            <FontAwesomeIcon className={styles.icon} icon={faTwitter}></FontAwesomeIcon>
+          </a>
+        </div>
       </div>
       <div className={styles.rightBar}>
         <FontAwesomeIcon className={styles.icon} icon={faUser} />

@@ -1,5 +1,5 @@
 @import '../../../styles/settings.scss';
-
+@import '../../../styles/global.scss';
 
 .root {
     display: flex;
@@ -68,7 +68,10 @@
             }
             p {
                 font-size: 16px;
-                padding: 20px 30px;
+                padding: 10px 30px;
+                select {
+                    margin-left: 20px;
+                }
             }
             .button {
                 padding: 10px 30px;
@@ -82,5 +85,21 @@
             }
         }
     }
-    
+}
+
+
+@include tablet {
+    .root {
+        .container {
+            flex-direction: column;
+            .rightContainer {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .root {
+    }
 }

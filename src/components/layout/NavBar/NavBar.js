@@ -10,9 +10,9 @@ import clsx from 'clsx';
 import styles from './NavBar.module.scss';
 
 const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
+  <nav className={clsx(className, styles.root)}>
     <NavLink to='/home'className={styles.navLink}>Home</NavLink>
-  </div>
+  </nav>
 );
 
 Component.propTypes = {

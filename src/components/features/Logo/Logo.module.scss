@@ -1,4 +1,6 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
 
 .root {
     height: 100vh;
@@ -20,5 +22,18 @@
             border: 5px solid $color-white;
             border-radius: 10px;
         }
+    }
+}
+
+
+@include tablet {
+    .root {
+       height: 80vh;
+    }
+}
+
+@include mobile {
+    .root {
+        display: none;
     }
 }

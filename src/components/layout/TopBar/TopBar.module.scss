@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
 .root {
     display: flex;
@@ -18,12 +19,14 @@
         h2 {
             margin-right: 10px;
         }
-        .icon {
-            cursor: pointer;
-            color: $color-white;
-            &:hover {
-                transform: scale(1.4);
-                transition: 2s all;
+        .iconBox {
+            .icon {
+                cursor: pointer;
+                color: $color-white;
+                &:hover {
+                    transform: scale(1.4);
+                    transition: 2s all;
+                }
             }
         }
     }
@@ -38,6 +41,25 @@
                 cursor: pointer;
                 padding: 0 10px;
                 color: $color-white;
+            }
+        }
+    }
+}
+
+
+
+@include mobile {
+    .root {
+        flex-direction: column;
+        .leftBar {
+            padding-top: 3px;
+            justify-content: space-between;
+        }
+        .rightBar {
+            padding-right: 2px;
+            justify-content: center;
+            h2 {
+                margin-right: 10px;
             }
         }
     }

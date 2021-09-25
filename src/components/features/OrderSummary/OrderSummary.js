@@ -70,8 +70,8 @@ const Component = ({className, cart, addNewOrder}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cart}>
         {cart.length === 0 ? (
-          <div>
-              Your Cart Is Empty <Link to="/">Go Back</Link>
+          <div className={styles.cart__linkBox}>
+              Your Cart Is Empty <Link to="/" className={styles.cart__link}>Go Back</Link>
           </div>
         ) : (
           <div className={styles.cart__items}>

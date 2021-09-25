@@ -25,8 +25,8 @@ const Component = ({className, cart}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cart}>
         {cart.length === 0 ? (
-          <div>
-              Your Cart Is Empty <Link to="/">Go Back</Link>
+          <div className={styles.cart__linkBox}>
+              Your Cart Is Empty <Link className={styles.cart__link} to="/">Go Back</Link>
           </div>
         ) : (
           <div className={styles.cart__items}>

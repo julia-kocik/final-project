@@ -1,8 +1,10 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
 .root {
     .container {
     display: flex;
+    justify-content: center;
     height: auto;
     width: 100%;
     flex-wrap: wrap;
@@ -52,5 +54,23 @@
     }
 }
 
+@include tablet {
+    .root {
+        .container {
+            .postBox {
+                flex: 0 0 40%;
+            }
+        }
+    }
+}
 
+@include mobile {
+    .root {
+        .container {
+            .postBox {
+                flex: 0 0 90%;
+            }
+        }
+    }
+}
 

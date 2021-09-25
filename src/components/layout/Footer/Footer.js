@@ -10,14 +10,14 @@ import clsx from 'clsx';
 import styles from './Footer.module.scss';
 
 const Component = ({className}) => (
-  <div className={clsx(className, styles.root)}>
+  <footer className={clsx(className, styles.root)}>
     <div className={styles.footerLink}>
       <NavLink to='/home'className={styles.navLink}>Home</NavLink>
     </div>
     <div className={styles.copyright}>
       <span>copyright © 2021 - PET STORE</span>
     </div>
-  </div>
+  </footer>
 );
 
 Component.propTypes = {
