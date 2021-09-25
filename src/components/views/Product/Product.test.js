@@ -4,13 +4,16 @@ import { ProductComponent } from './Product';
 
 const mockProps = {
   className: 'className',
-  products: [
-    {
-      title: '',
-      photo: '',
-      price: '',
-    },
-  ],
+  one: {},
+  loading: true,
+  error: {},
+  history: {},
+  getProductDetails: ()=> {
+    console.log('function');
+  },
+  addToCart: () => {
+    console.log('function');
+  },
 };
 
 describe('Component Product', () => {
