@@ -1,4 +1,4 @@
-## Demo
+## PET STORE
 
 https://pet-store123.herokuapp.com/
 
@@ -6,12 +6,13 @@ https://pet-store123.herokuapp.com/
 
 #### Endpoints:
 
-`api/products` 
+`api/products`
+`api/products/:id`
 `api/orders` 
 
 #### To local run:
 
-backend server start:
+backend start:
 
 `npx nodemon backend/server.js`
 
