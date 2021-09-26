@@ -1,3 +1,35 @@
+## PET STORE
+
+https://pet-store123.herokuapp.com/
+
+## How to use
+
+#### Endpoints:
+
+`api/products`
+`api/products/:id`
+`api/orders` 
+
+#### To local run:
+
+backend start:
+
+`npx nodemon backend/server.js`
+
+frontend start:
+
+`yarn start`
+
+### Features and stack
+
+- @reactJS
+- @react-hooks
+- @redux
+- @redux-thunk
+- @expressJS
+- @MongoDB
+- @mongoose
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
