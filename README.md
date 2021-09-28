@@ -14,7 +14,7 @@ https://pet-store123.herokuapp.com/
 
 backend start:
 
-`npx nodemon backend/server.js`
+`yarn server`
 
 frontend start:
 
