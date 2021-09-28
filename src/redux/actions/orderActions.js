@@ -1,6 +1,6 @@
 import * as actionTypes from '../constants/orderConstants';
 import axios from 'axios';
-require('dotenv').config();
+import { API_URL } from '../../config';
 
 export const addOneOrder= (data) => {
   return (dispatch, getState) => {
@@ -12,7 +12,7 @@ export const addOneOrder= (data) => {
     */
   
     axios
-      .post(`${process.env.API_URL}/orders`, data)
+      .post(`${API_URL}/orders`, data)
       .then(() => {
         dispatch({
           type: actionTypes.ADD_ORDER,
