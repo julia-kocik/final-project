@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -14,6 +14,9 @@ import { addOneOrder } from '../../../redux/actions/orderActions';
 import styles from './OrderSummary.module.scss';
 
 const Component = ({className, cart, addNewOrder}) => {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   const elemsForCart = cart.map((item) => {
     return {
       name: item.title,

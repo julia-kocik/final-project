@@ -12,6 +12,7 @@ import styles from './Products.module.scss';
 
 const Component = ({className, getProducts, products, error, loading}) => {
   useEffect(() => {
+    window.scrollTo(0,0);
     getProducts();
   }, [getProducts]);
   return (

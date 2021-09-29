@@ -13,6 +13,7 @@ import styles from './Product.module.scss';
 const Component = ({className, one, getProductDetails, error, loading, addToCart, history}) => {
   const [qty, setQty] = useState(1);
   useEffect(() => {
+    window.scrollTo(0,0);
     getProductDetails();
   }, [getProductDetails]);
   const addToCartHandler = () => {

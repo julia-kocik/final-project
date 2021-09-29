@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {CartItem} from '../CartItem/CartItem';
 
@@ -11,6 +11,9 @@ import {Link} from 'react-router-dom';
 import styles from './Cart.module.scss';
 
 const Component = ({className, cart}) => {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   const getCartCount = () => {
     return cart.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
