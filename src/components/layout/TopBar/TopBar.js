@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 import { connect } from 'react-redux';
 
@@ -33,8 +33,6 @@ const Component = ({className, cart}) => {
         </div>
       </div>
       <div className={styles.rightBar}>
-        <FontAwesomeIcon className={styles.icon} icon={faUser} />
-        <h2>LOG IN</h2>
         <FontAwesomeIcon className={styles.icon} icon={faShoppingCart} />
         <Link className={styles.cartLink} to="/cart">
           <h2>CART ({getCartCount()})</h2>

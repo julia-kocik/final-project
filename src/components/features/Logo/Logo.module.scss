@@ -3,7 +3,7 @@
 
 
 .root {
-    height: 80vh;
+    height: 76vh;
     width: 100%;
     background-color: $color-blue;
     background: url('../../../veggies.jpg');
@@ -17,7 +17,7 @@
         .title {
             color: $color-white;
             margin: 0;
-            padding: 80px;
+            padding: 30px 80px;
             font-family: $font-logo;
             font-size: 100px;
             border: 8px solid $color-white;

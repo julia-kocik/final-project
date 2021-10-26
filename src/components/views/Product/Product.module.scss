@@ -6,17 +6,19 @@
     height: auto;
     width: 100%;
     flex-wrap: wrap;
-    margin: 40px 0px;
+    margin: 80px 0;
     font-family: $font-main;
     .container {
         display: flex;
+        justify-content: center;
         width: 100%;
         .leftContainer {
             flex: 0 0 40%;
             .postBox {
                 height: 510px;
                 margin: 0 20px;
-                border: 2px solid gray;
+                border: 2px solid $color-dark-green;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
                 border-radius: 5px;
                 display: flex;
                 flex: 0 0 30%;
@@ -41,7 +43,8 @@
             }
             .imagesBox {
                 margin: 0 20px;
-                border: 2px solid gray;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+                border: 2px solid $color-dark-green;
                 border-top: none;
                 border-radius: 5px;
                 display: flex;
@@ -56,12 +59,14 @@
             }
         }
         .rightContainer {
-            border: 2px solid gray;
+            border: 2px solid $color-dark-green;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
             border-radius: 5px;
             flex: 0 0 40%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 20px 30px;
             h2 {
                 font-weight: bold;
                 text-align: center;
@@ -75,10 +80,13 @@
                 }
             }
             .button {
-                padding: 10px 30px;
-                font-size: 16px;
-                border-radius: 4px;
-                background-color: black;
+                padding: 16px 0;
+                align-self: flex-end;
+                font-size: 18px;
+                border-radius: 16px;
+                background-color: $color-dark-green;
+                border: none;
+                width: 160px;
                 color: $color-white;
                 text-decoration: none;
                 margin: 10px;

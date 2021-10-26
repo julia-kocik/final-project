@@ -15,7 +15,7 @@ const Component = ({className}) => (
       <NavLink to='/home'className={styles.navLink}>Home</NavLink>
     </div>
     <div className={styles.copyright}>
-      <span>copyright © 2021 - PET STORE</span>
+      <span>Groceries Store © 2021</span>
     </div>
   </footer>
 );

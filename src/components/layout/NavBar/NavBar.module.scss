@@ -3,9 +3,10 @@
 .root {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: $color-green;
     position: relative;
-    border-top: 1px solid $color-white;
+    height: 12vh;
     .navLink {
         font-family: $font-main;
         font-size: 24px;
