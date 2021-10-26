@@ -3,24 +3,28 @@
 
 
 .root {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-color: $color-blue;
-    background: url('https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background: url('../../../veggies.jpg');
+    z-index: -2;
     .overlay {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
-        background:rgba(156, 104, 104, 0.3);
         .title {
             color: $color-white;
-            padding: 20px 40px;
+            margin: 0;
+            padding: 80px;
             font-family: $font-logo;
             font-size: 100px;
-            border: 5px solid $color-white;
-            border-radius: 10px;
+            border: 8px solid $color-white;
+            border-radius: 20px;
+            position: relative;
+            background:rgba(160, 121, 121, 0.5);
+            font-weight: 300;
         }
     }
 }

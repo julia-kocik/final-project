@@ -4,9 +4,10 @@
 .root {
     display: flex;
     justify-content: space-between;
-    background-color: $color-blue;
+    background: $color-green;
     color: $color-white;
     font-family: $font-main;
+    font-size: 16px;
     .icon {
         font-size: 24px;
         margin: 5px;

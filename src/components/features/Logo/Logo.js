@@ -12,7 +12,7 @@ const Component = ({className}) => {
   return (
     <div className={clsx(className, styles.root)}>
       <div className={styles.overlay}>
-        <h2 className={styles.title}>PET STORE</h2>
+        <h2 className={styles.title}>GROCERIES STORE</h2>
       </div>
     </div>
   );
