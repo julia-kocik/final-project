@@ -8,12 +8,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border: 2px solid $color-dark-green;
     border-radius: 10px;
-    .cartItem__image {
+    .cartItemImage {
       width: 350px;
       object-fit: contain;
-      border-radius: 10px;
+      padding: 0 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     }
-    .cartItem__details {
+    .cartItemDetails {
       padding: 20px 30px;
       display: flex;
       flex-direction: column;
@@ -23,14 +24,14 @@
         font-weight: bold;
         margin-bottom: 5px;
       }
-      .details__title {
+      .detailsTitle {
         font-size: 1rem;
         font-weight: bold;
       }
-      .details__desc {
+      .detailsDesc {
         font-size: 0.8rem;
       }
-      .details__price {
+      .detailsPrice {
         font-size: 1rem;
         font-weight: bold;
       }
@@ -38,21 +39,22 @@
         resize: none;
         border: 2px solid $color-dark-green;
         border-radius: 10px;
+        margin-top: 10px;
       }
     }
   }
-  .cartItem__actions {
+  .cartItemActions {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 0.6rem;
-    .cartItem__qty {
+    .cartItemQty {
       display: flex;
       align-items: center;
     }
     
-    .cartItem__qty input {
+    .cartItemQty input {
       padding: 10px;
       margin-left: 0.4rem;
       width: 60px;
@@ -60,7 +62,7 @@
       border: 2px solid $color-dark-green;    
       outline: none;
     }
-    .actions__deleteItemBtn {
+    .actionsDeleteItemBtn {
       width: 50px;
       height: 50px;
       border: 2px solid $color-dark-green;
@@ -72,7 +74,7 @@
       color: $color-dark-green;
     }
     
-    .actions__deleteItemBtn:hover {
+    .actionsDeleteItemBtn:hover {
       transform: scale(1.2) rotate(360deg);
       background-color: $color-dark-green;
       color: $color-white;
@@ -87,12 +89,12 @@
   .root {
     .cartItem {
       flex-direction: column;
-      .cartItem__image {
+      .cartItemImage {
         width: 100%;
         object-fit: contain;
         border-radius: 10px;
       }
-      .cartItem__actions {
+      .cartItemActions {
         flex-direction: row;
       }
     }

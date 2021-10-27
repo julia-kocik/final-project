@@ -32,7 +32,7 @@ const Component = ({className, one, getProductDetails, error, loading, addToCart
             <div className={styles.postBox}>
               <p className={styles.title}>{one.title}</p>
               <img className={styles.image} src={one.photo} alt="Product one"></img>
-              <p className={styles.price}>${one.price}</p>
+              <p className={styles.price}>${one.price} / box</p>
             </div>
             <div className={styles.imagesBox}>
               <img className={styles.addPhoto} src={one.addPhoto1} alt="Product"></img>

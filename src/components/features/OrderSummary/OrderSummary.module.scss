@@ -9,17 +9,17 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    .cart__linkBox {
+    .cartLinkBox {
       font-size: 1rem;
-      .cart__link {
+      .cartLink {
       text-decoration: none;
       }
     }
-    .cart__items {
+    .cartItems {
       flex: 0.7;
       margin-right: 1rem;
     }
-    .cart__summary {
+    .cartSummary {
       margin-right: 1rem;
       height: 150px;
       flex: 0.3;
@@ -29,22 +29,23 @@
       padding: 1rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       border-radius: 10px;
-      .summary__title {
+      border: 2px solid $color-dark-green;
+      .summaryTitle {
         font-size: 1.2rem;
         font-weight: bold;
       }
       
-      .summary__price {
+      .summaryPrice {
         display: flex;
         align-items: center;
       }
-      .summary__price span:nth-child(1) {
+      .summaryPrice span:nth-child(1) {
         font-size: 1.2rem;
         flex: 0.6;
         font-weight: bold;
       }
       
-      .summary__price span:nth-child(2) {
+      .summaryPrice span:nth-child(2) {
         flex: 0.4;
         font-size: 1.2rem;
         font-weight: bold;
@@ -54,14 +55,18 @@
   .formBox {
     display: flex;
     justify-content: center;
-    margin: 20px 10px;
+    margin: 2rem 160px;
+    border: 2px solid $color-dark-green;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
     .addForm {
       display: flex;
       flex-direction: column;
       width: 40%;
+      margin: 40px 0;
       .formInput {
-        margin: 10px 20px;
-        border: 1px solid $color-blue;
+        margin: 20px 20px;
+        border: 1px solid $color-dark-green;
         border-radius: 5px;
         padding: 10px;
         resize: none;
@@ -70,22 +75,23 @@
           font-size: 16px;
           margin: 10px 20px;
       }
-      .summary__checkoutBtn {
-        padding: 10px 17px;
-        margin: 20px 10px;
-        border: 1px solid $color-blue;
-        border-radius: 10px;
-        background: $color-blue;
+      .summaryCheckoutBtn {
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 16px;
+        background-color: $color-dark-green;
+        border: none;
+        width: 210px;
         color: $color-white;
-        font-size: 1.2rem;
-        font-weight: bold;
+        margin: 20px;
         cursor: pointer;
+        align-self: center;
       }
-      .summary__checkoutBtn:focus {
+      .summaryCheckoutBtn:focus {
         outline: none;
         border: 1px solid $color-blue;
       }
-      .summary__checkoutBtn:hover {
+      .summaryCheckoutBtn:hover {
         opacity: 0.75;
       }
     }
@@ -102,11 +108,11 @@
     .cart {
       width: 90%;
       flex-direction: column;
-      .cart__linkBox {
+      .cartLinkBox {
         margin: 20px 5px;
       }
-      .cart__summary {
-        .summary__checkoutBtn {
+      .cartSummary {
+        .summaryCheckoutBtn {
           margin-top: 20px;
         }
       }
@@ -125,11 +131,11 @@
     .cart {
       width: 90%;
       flex-direction: column;
-      .cart__linkBox {
+      .cartLinkBox {
         margin: 20px 5px;
       }
-      .cart__summary {
-        .summary__checkoutBtn {
+      .cartSummary {
+        .summaryCheckoutBtn {
           margin-top: 20px;
         }
       }

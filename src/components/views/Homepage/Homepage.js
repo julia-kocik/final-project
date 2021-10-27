@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {Products} from '../Products/Products';
 import {Logo} from '../../features/Logo/Logo';
-import {NavBar} from '../../layout/NavBar/NavBar';
 
 import clsx from 'clsx';
 
@@ -18,7 +17,6 @@ const Component = ({className}) => {
   return (
     <div className={clsx(className, styles.root)}>
       <Logo/>
-      <NavBar/>
       <Products/>
     </div>
   );

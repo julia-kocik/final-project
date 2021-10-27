@@ -17,6 +17,7 @@
             .postBox {
                 height: 510px;
                 margin: 0 20px;
+                padding: 20px 0;
                 border: 2px solid $color-dark-green;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
                 border-radius: 5px;
@@ -91,6 +92,13 @@
                 text-decoration: none;
                 margin: 10px;
                 cursor: pointer;
+                &:focus {
+                    outline: none;
+                    border: 1px solid $color-blue;
+                  }
+                &:hover {
+                    opacity: 0.75;
+                }
             }
         }
     }

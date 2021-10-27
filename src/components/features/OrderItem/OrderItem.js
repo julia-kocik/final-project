@@ -13,15 +13,15 @@ const Component = ({className, item}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cartItem}>
         <img
-          className={styles.cartItem__image}
+          className={styles.cartItemImage}
           src={item.photo}
           alt={item.title}
         />
-        <div className={styles.cartItem__details}>
-          <p className={styles.details__title}>Name: {item.title}</p>
-          <p className={styles.details__desc}>Quantity: {item.qty}</p>
-          <p className={styles.details__price}>Price: $ {item.price}</p>
-          <p className={styles.details__price}>Additional request: {item.request}</p>
+        <div className={styles.cartItemDetails}>
+          <p className={styles.detailsTitle}>Name: {item.title}</p>
+          <p className={styles.detailsDesc}>Quantity: {item.qty}</p>
+          <p className={styles.detailsPrice}>Price: $ {item.price}</p>
+          <p className={styles.detailsPrice}>Additional request: {item.request}</p>
         </div>
       </div>
     </div>

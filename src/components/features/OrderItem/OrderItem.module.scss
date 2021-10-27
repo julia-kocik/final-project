@@ -8,29 +8,31 @@
       display: flex;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       border-radius: 10px;
-      .cartItem__image {
-        width: 200px;
-        height: 250px;
+      border: 2px solid $color-dark-green;
+      .cartItemImage {
+        width: 350px;
         object-fit: contain;
-        border-radius: 10px;
+        padding: 0 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       }
-      .cartItem__details {
-        padding: 1rem;
+      .cartItemDetails {
+        padding: 20px;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         color: $color-blue;
-        .details__title {
+        .detailsTitle {
           font-size: 1rem;
           font-weight: bold;
         }
         
-        .details__desc {
+        .detailsDesc {
           font-size: 1rem;
           font-weight: bold;
         }
         
-        .details__price {
+        .detailsPrice {
           font-size: 1rem;
           font-weight: bold;
         }

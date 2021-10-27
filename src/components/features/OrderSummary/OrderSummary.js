@@ -41,15 +41,12 @@ const Component = ({className, cart, addNewOrder}) => {
       email: '',
     }
   );
-
   const handleChange = (e) => {
     setOrder({ ...order, [e.target.name]: e.target.value });
   };
   const getCartCount = () => {
     return cart.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
-
-  
   const submitForm = (e) => {
     e.preventDefault();
     //console.log(order.cart, order.name, order.surname, order.address);
@@ -73,19 +70,19 @@ const Component = ({className, cart, addNewOrder}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cart}>
         {cart.length === 0 ? (
-          <div className={styles.cart__linkBox}>
-              Your Cart Is Empty <Link to="/" className={styles.cart__link}>Go Back</Link>
+          <div className={styles.cartLinkBox}>
+              Your Cart Is Empty <Link to="/" className={styles.cartLink}>Go Back</Link>
           </div>
         ) : (
-          <div className={styles.cart__items}>
+          <div className={styles.cartItems}>
             {cart.map((item) => (
               <OrderItem key={item.product} item={item} />
             ))}
           </div>
         )}
-        <div className={styles.cart__summary}>
-          <h4 className={styles.summary__title}>Order Summary</h4>
-          <div className={styles.summary__price}>
+        <div className={styles.cartSummary}>
+          <h4 className={styles.summaryTitle}>Order Summary</h4>
+          <div className={styles.summaryPrice}>
             <span>TOTAL: ({getCartCount()}) items</span>
             <span>$ {getCartSubTotal()}</span>
           </div>
@@ -106,7 +103,7 @@ const Component = ({className, cart, addNewOrder}) => {
             <input className={styles.formInput} type="text" name="address" onChange={handleChange}></input>
             <label>Email</label>
             <input className={styles.formInput} type="email" name="email" onChange={handleChange}></input>
-            <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
+            <button className={styles.summaryCheckoutBtn} type="submit">Send order</button>
           </form>
         )}
       </div>

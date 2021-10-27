@@ -28,24 +28,24 @@ const Component = ({className, cart}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cart}>
         {cart.length === 0 ? (
-          <div className={styles.cart__linkBox}>
-              Your Cart Is Empty <Link className={styles.cart__link} to="/">Go Back</Link>
+          <div className={styles.cartLinkBox}>
+              Your Cart Is Empty <Link className={styles.cartLink} to="/">Go Back</Link>
           </div>
         ) : (
-          <div className={styles.cart__items}>
+          <div className={styles.cartItems}>
             {cart.map((item) => (
               <CartItem key={item.product} item={item} />
             ))}
           </div>
         )}
-        <div className={styles.cart__summary}>
-          <h4 className={styles.summary__title}>Cart Summary</h4>
-          <div className={styles.summary__price}>
+        <div className={styles.cartSummary}>
+          <h4 className={styles.summaryTitle}>Cart Summary</h4>
+          <div className={styles.summaryPrice}>
             <span>TOTAL: ({getCartCount()}) items</span>
             <span>$ {getCartSubTotal()}</span>
           </div>
-          <Link to='/order'>
-            <button className={styles.summary__checkoutBtn}>
+          <Link to='/order' className={styles.btnBox}>
+            <button className={styles.summaryCheckoutBtn}>
           Proceed To Checkout
             </button>
           </Link>

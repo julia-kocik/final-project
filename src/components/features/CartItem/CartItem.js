@@ -25,19 +25,19 @@ const Component = ({className, item, remove, addToCart, adjustItemRequest}) => {
     <div className={clsx(className, styles.root)}>
       <div className={styles.cartItem}>
         <img
-          className={styles.cartItem__image}
+          className={styles.cartItemImage}
           src={item.photo}
           alt={item.title}
         />
-        <div className={styles.cartItem__details}>
-          <p className={styles.details__title}>{item.title}</p>
-          <p className={styles.details__desc}>{item.shortDesc}</p>
+        <div className={styles.cartItemDetails}>
+          <p className={styles.detailsTitle}>{item.title}</p>
+          <p className={styles.detailsDesc}>{item.description}</p>
           <label htmlFor="requests">Additional request:</label>
-          <textarea name="requests" value={area} rows="4" onChange={onChangeRequestHandler}></textarea>
-          <p className={styles.details__price}>$ {item.price}</p>
+          <textarea name="requests" value={area} rows="3" onChange={onChangeRequestHandler}></textarea>
+          <p className={styles.detailsPrice}>$ {item.price} / box</p>
         </div>
-        <div className={styles.cartItem__actions}>
-          <div className={styles.cartItem__qty}>
+        <div className={styles.cartItemActions}>
+          <div className={styles.cartItemQty}>
             <label htmlFor="qty">Qty</label>
             <input
               min="1"
@@ -49,7 +49,7 @@ const Component = ({className, item, remove, addToCart, adjustItemRequest}) => {
             />
           </div>
           <button
-            className={styles.actions__deleteItemBtn}
+            className={styles.actionsDeleteItemBtn}
           >
             <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} onClick={() => remove(item.product)}></FontAwesomeIcon>
           </button>
