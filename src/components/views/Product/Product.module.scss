@@ -107,10 +107,48 @@
 
 @include tablet {
     .root {
+        padding: 10px 40px;
         .container {
             flex-direction: column;
+            .leftContainer {
+                flex: 0 0 40%;
+                .imagesBox {
+                    margin: 0 20px;
+                    .addPhoto {
+                        width: 25%;
+                        height: 140px;
+                        padding: 20px 0;
+                    }
+                }
+                .postBox {
+                    .title {
+                        font-size: 32px;
+                    }
+                    .price {
+                        font-size: 24px;
+                    }
+                    .image {
+                        height: 65%;
+                    }
+                }
+            }
             .rightContainer {
-                margin: 20px;
+                margin: 40px 20px;
+                h2 {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 22px;
+                    select {
+                        font-size: 24px;
+                    }
+                }
+                .button {
+                    padding: 22px 0;
+                    font-size: 22px;
+                    border-radius: 16px;
+                    width: 200px;
+                }
             }
         }
     }

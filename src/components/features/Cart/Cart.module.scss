@@ -34,18 +34,15 @@
         font-size: 1.2rem;
         font-weight: bold;
       }
-      
       .summaryPrice {
         display: flex;
         align-items: center;
       }
-      
       .summaryPrice span:nth-child(1) {
         font-size: 1.2rem;
         flex: 0.6;
         font-weight: bold;
       }
-      
       .summaryPrice span:nth-child(2) {
         flex: 0.4;
         font-size: 1.2rem;
@@ -70,7 +67,6 @@
           outline: none;
           border: 1px solid $color-blue;
         }
-        
         .summaryCheckoutBtn:hover {
           opacity: 0.75;
         }
@@ -89,9 +85,11 @@
       .cartLinkBox {
         margin: 20px 5px;
       }
-      .cartSummary {
-        .summaryCheckoutBtn {
-          margin-top: 20px;
+        .cartSummary {
+          .btnBox {
+            .summaryCheckoutBtn {
+              margin: 40px 0 20px 0;
+            }
         }
       }
     }

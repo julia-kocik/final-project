@@ -81,8 +81,16 @@
 @include tablet {
     .root {
         .container {
-            .postBox {
-                flex: 0 0 40%;
+            .productsBox {
+                flex: 0 0 42%;
+                .productsLink {
+                    .title {
+                        font-size: 24px;
+                    }
+                    .price {
+                        font-size: 22px;
+                    }
+                }
             }
         }
     }
@@ -91,7 +99,7 @@
 @include mobile {
     .root {
         .container {
-            .postBox {
+            .productsBox {
                 flex: 0 0 90%;
             }
         }

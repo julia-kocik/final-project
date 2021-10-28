@@ -89,7 +89,6 @@
       }
       .summaryCheckoutBtn:focus {
         outline: none;
-        border: 1px solid $color-blue;
       }
       .summaryCheckoutBtn:hover {
         opacity: 0.75;
@@ -118,6 +117,7 @@
       }
     }
     .formBox {
+      margin: 32px 48px 32px 40px;
       .addForm {
         width: 80%;
       }

@@ -32,7 +32,22 @@
 
 @include tablet {
     .root {
-       height: 80vh;
+       max-height: 50vh;
+       margin-bottom: 22px;
+       .overlay {
+            .title {
+                color: $color-white;
+                margin: 0;
+                padding: 30px 80px;
+                font-family: $font-logo;
+                font-size: 75px;
+                border: 8px solid $color-white;
+                border-radius: 20px;
+                position: relative;
+                background:rgba(160, 121, 121, 0.5);
+                font-weight: 300;
+            }
+        }
     }
 }
 

@@ -52,15 +52,15 @@
     .cartItemQty {
       display: flex;
       align-items: center;
-    }
-    
-    .cartItemQty input {
-      padding: 10px;
-      margin-left: 0.4rem;
-      width: 60px;
-      border-radius: 10px;
-      border: 2px solid $color-dark-green;    
-      outline: none;
+      width: 90%;
+      input {
+        padding: 10px;
+        margin-left: 0.4rem;
+        width: 60px;
+        border-radius: 10px;
+        border: 2px solid $color-dark-green;    
+        outline: none;
+      }
     }
     .actionsDeleteItemBtn {
       width: 50px;
@@ -83,7 +83,20 @@
 }
 
 
-  
+@include tablet {
+  .root {
+    margin: 40px 0;
+    .cartItemActions {
+      margin: 0;
+      .cartItemQty {
+        flex-direction: column;
+          input {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}  
 
 @include mobile {
   .root {
