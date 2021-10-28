@@ -32,24 +32,26 @@ const Component = ({className, cart}) => {
               Your Cart Is Empty <Link className={styles.cartLink} to="/">Go Back</Link>
           </div>
         ) : (
-          <div className={styles.cartItems}>
-            {cart.map((item) => (
-              <CartItem key={item.product} item={item} />
-            ))}
-          </div>
-        )}
-        <div className={styles.cartSummary}>
-          <h4 className={styles.summaryTitle}>Cart Summary</h4>
-          <div className={styles.summaryPrice}>
-            <span>TOTAL: ({getCartCount()}) items</span>
-            <span>$ {getCartSubTotal()}</span>
-          </div>
-          <Link to='/order' className={styles.btnBox}>
-            <button className={styles.summaryCheckoutBtn}>
+          <>
+            <div className={styles.cartItems}>
+              {cart.map((item) => (
+                <CartItem key={item.product} item={item} />
+              ))}
+            </div>
+            <div className={styles.cartSummary}>
+              <h4 className={styles.summaryTitle}>Cart Summary</h4>
+              <div className={styles.summaryPrice}>
+                <span>TOTAL: ({getCartCount()}) items</span>
+                <span>$ {getCartSubTotal()}</span>
+              </div>
+              <Link to='/order' className={styles.btnBox}>
+                <button className={styles.summaryCheckoutBtn}>
           Proceed To Checkout
-            </button>
-          </Link>
-        </div>
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
