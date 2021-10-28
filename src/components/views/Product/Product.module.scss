@@ -160,11 +160,14 @@
             flex-direction: column;
             width: 100%;
             .rightContainer {
-                flex: 0 0 44%;
-                margin: 0 20px;
-                width: 90%;
+                flex: 0 0 40%;
+                margin: 30px 20px;
+                width: 89%;
                 p {
                     margin: 0;
+                }
+                .button {
+                    align-self: center;
                 }
             }
             .leftContainer {

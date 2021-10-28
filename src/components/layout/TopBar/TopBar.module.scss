@@ -62,6 +62,7 @@
 @include mobile {
     .root {
         flex-direction: column;
+        height: 24vh;
         .leftBar {
             padding-top: 3px;
             justify-content: space-between;
