@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { addToCart, removeFromCart, adjustItemRequest } from '../../../redux/actions/cartActions';
-
 import { connect } from 'react-redux';
-
 import styles from './CartItem.module.scss';
 
 const Component = ({className, item, remove, addToCart, adjustItemRequest}) => {
@@ -67,10 +64,6 @@ Component.propTypes = {
   adjustItemRequest: PropTypes.func,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
 const mapDispatchToProps = (dispatch, props) => ({
   remove: (id) => dispatch(removeFromCart(id)), 
   addToCart: (id, qty) => dispatch(addToCart(id, qty)), 
@@ -80,7 +73,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 const Container = connect(null, mapDispatchToProps)(Component);
 
 export {
-  //Component as CartItem,
   Container as CartItem,
   Component as CartItemComponent,
 };

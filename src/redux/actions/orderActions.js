@@ -4,13 +4,6 @@ import { API_URL } from '../../config';
 
 export const addOneOrder= (data) => {
   return (dispatch, getState) => {
-    /*
-    const fd = new FormData();
-    for(const param in data) {
-      fd.append(param, data[param]);
-    }
-    */
-  
     axios
       .post(`${API_URL}/orders`, data)
       .then(() => {

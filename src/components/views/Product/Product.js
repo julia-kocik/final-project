@@ -1,13 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-
 import clsx from 'clsx';
-
 import { connect } from 'react-redux';
 import { getProductDetails } from '../../../redux/actions/productActions';
 import { addToCart } from '../../../redux/actions/cartActions';
-
-
 import styles from './Product.module.scss';
 
 const Component = ({className, one, getProductDetails, error, loading, addToCart, history}) => {
@@ -86,7 +82,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  //Component as Product,
   Container as Product,
   Component as ProductComponent,
 };

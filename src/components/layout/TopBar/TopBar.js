@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
 import { connect } from 'react-redux';
-
 import styles from './TopBar.module.scss';
-//import { Link } from 'react-router-dom';
 
 const Component = ({className, cart}) => {
   const getCartCount = () => {
@@ -51,14 +47,9 @@ const mapStateToProps = state => ({
   cart: state.cart.cartItems,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
 const Container = connect(mapStateToProps)(Component);
 
 export {
-  //Component as TopBar,
   Container as TopBar,
   Component as TopBarComponent,
 };

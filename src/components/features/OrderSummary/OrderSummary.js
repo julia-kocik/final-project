@@ -1,16 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-
 import clsx from 'clsx';
 import { OrderItem } from '../OrderItem/OrderItem';
 import {Link} from 'react-router-dom';
-
 import { connect } from 'react-redux';
 import { addOneOrder } from '../../../redux/actions/orderActions';
-
-
-
 import styles from './OrderSummary.module.scss';
 
 const Component = ({className, cart, addNewOrder}) => {
@@ -49,12 +44,10 @@ const Component = ({className, cart, addNewOrder}) => {
   };
   const submitForm = (e) => {
     e.preventDefault();
-    //console.log(order.cart, order.name, order.surname, order.address);
     if(order.cart && order.name && order.surname && order.address && order.email){
       order.id = uuidv4();
       addNewOrder(order);
       alert('Order has been saved!');
-
       setOrder({
         id: '',
         name: '',
@@ -128,7 +121,6 @@ const mapDispatchToProps = dispatch => ({
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  //Component as OrderSummary,
   Container as OrderSummary,
   Component as OrderSummaryComponent,
 };
